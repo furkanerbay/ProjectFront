@@ -1,0 +1,43 @@
+<div class="allbtn">
+    <mat-form-field appearance="fill">
+        <mat-label>User ID</mat-label>
+        <mat-select #mySelect [(ngModel)]="userId">
+            <mat-option *ngFor="let user of users" [value]="user.id" >
+                {{user.firstName}}
+            </mat-option> 
+        </mat-select>
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+        <mat-label>User Province Id</mat-label>
+        <mat-select #mySelect [(ngModel)]="userProvinceId">
+            <mat-option *ngFor="let province of provinces" [value]="province.id">
+                {{province.provinceName}}
+            </mat-option> 
+        </mat-select>
+    </mat-form-field>
+    <br>
+    
+    <mat-form-field appearance="fill">
+        <mat-label>Store Id</mat-label>
+        <mat-select #mySelect [(ngModel)]="storeId">
+            <mat-option *ngFor="let store of stores" [value]="store.id" >
+                {{store.storeName}}
+            </mat-option> 
+        </mat-select>
+    </mat-form-field>
+    <br>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Alis Türü</mat-label>
+        <mat-select #mySelect [(ngModel)]="storeProvinceId">
+            <mat-option *ngFor="let province of provinces" [value]="province.id" >
+                {{province.provinceName}}
+            </mat-option> 
+        </mat-select>
+    </mat-form-field>
+    <br>
+
+    
+    <button mat-raised-button color="primary" class="btn" (click)="create()">Create Order</button>
+</div>

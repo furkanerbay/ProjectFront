@@ -1,0 +1,33 @@
+<button mat-raised-button color="primary" class="button1" routerLink="create">Magaza Ekle</button>
+
+<div class="mat-elevation-z8 tablediv">
+    <table class="table1" mat-table [dataSource]="dataSource">
+
+      
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> Store Id </th>
+        <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+      </ng-container>
+  
+      
+      <ng-container matColumnDef="storeName">
+        <th mat-header-cell *matHeaderCellDef> Magaza Adi </th>
+        <td mat-cell *matCellDef="let element"> {{element.storeName}} </td>
+      </ng-container>
+  
+      
+      <ng-container matColumnDef="storeDescription">
+        <th mat-header-cell *matHeaderCellDef> Magaza Aciklamasi </th>
+        <td mat-cell *matCellDef="let element"> {{element.storeDescription}} </td>
+      </ng-container>
+        
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  
+    <mat-paginator (page)="pageChanged()"
+                  [pageSizeOptions]="[5, 10, 20]"
+                   showFirstLastButtons
+                   aria-label="Select page of periodic elements">
+    </mat-paginator>
+  </div>

@@ -1,0 +1,39 @@
+<div class="allbtn">
+    <mat-form-field appearance="fill" class="stock-type-create">
+        <mat-label>Kitap Adi</mat-label>
+        <input matInput [(ngModel)]="bookName">
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+        <mat-label>Kategori Adi</mat-label>
+        <mat-select #mySelect [(ngModel)]="categoryId">
+            <mat-option *ngFor="let cate of categories" [value]="cate.id" >
+                {{cate.categoryName}}
+            </mat-option> 
+        </mat-select>
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill" class="stock-type-create">
+        <mat-label>Sayfa Sayisi</mat-label>
+        <input matInput [(ngModel)]="numberOfPages">
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+        <mat-label>Renk Adi</mat-label>
+        <mat-select #mySelect [(ngModel)]="colorId">
+            <mat-option *ngFor="let color of colors" [value]="color.id">
+                {{color.colorName}}
+            </mat-option> 
+        </mat-select>
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill" class="stock-type-create">
+        <mat-label>Aciklama</mat-label>
+        <input matInput [(ngModel)]="description">
+    </mat-form-field>
+    
+   
+
+    
+    <button mat-raised-button color="primary" class="btn" (click)="create()">Create Book</button>
+</div>

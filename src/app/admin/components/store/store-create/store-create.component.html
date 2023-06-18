@@ -1,0 +1,10 @@
+<mat-form-field appearance="fill" class="stock-type-create formlar">
+    <mat-label>Store Name</mat-label>
+    <input matInput [(ngModel)]="storeName"/>
+    <br>
+</mat-form-field>
+<mat-form-field appearance="fill" class="stock-type-create formlar">
+    <mat-label>Aciklama</mat-label>
+    <input matInput [(ngModel)]="storeDescription">
+</mat-form-field>
+<button mat-raised-button color="primary" class="btn" (click)="create()">Create Store</button>
